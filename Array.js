@@ -1,31 +1,72 @@
-let arr = [1,2,3];
-console.log(arr);
-arr.unshift();
-console.log(arr);
-//pop() :- delete last element of array
-arr.pop();
-console.log(arr);
+// JavaScript/TypeScript array operations
 
-//push() :- insert element at last index of array
-arr.push(1);
-console.log(arr);
+let arr = [1,2,4];
+arr.pop();                      //deletes last element
+console.log(arr)                // [1, 2]
 
-//shift() :- delete first element of array
-arr.shift();
-console.log(arr);
+arr.unshift();                  // gets the last element but doesn't delete it
+console.log(arr.unshift())      // 2
+console.log(arr);               // [1, 2]
 
-//unshift() :- get element from last index but don't delete it
-console.log(arr.unshift());
-console.log(arr);
+arr.shift();                    // deletes first element
+console.log(arr);               // [2]
 
-//map():- to perform operation on each element of array
-let doubledArr = arr.map(value=>value*2);
-console.log(doubledArr);
+arr.push(4);                    // push element at last indesx of array
+console.log(arr);               // [2, 4]
+arr.push(1); 
+arr.push(3);
+arr.push(7);
 
-//reduce() :- 
-let reducedArr = arr.reduce((fValue, lValue)=>fValue+lValue);
-console.log(reducedArr);
+console.log(arr.slice(2,4));    // returns shallow copy of array from start to end-1 [1, 3]
+console.log(arr);               // [2, 4, 1, 3, 7]
 
-//filter() :- to filter out results from array
-let filteredArr = arr.filter(value=>value>1);
-console.log(filteredArr);
+//chnages the content of array by removing or placing existing elements in place
+arr.splice(0,2);
+console.log(arr);               // [1, 3, 7]
+
+arr.splice(0,2, 10,11);
+console.log(arr);               // [10, 11, 7]
+
+
+const add2 = arr.map(value=>value+2);                   // to perform operation on every elements of array
+console.log(add2);                                      // [ 12, 13, 9 ]
+const greaterThan7 = arr.filter(value=>value>7);        // to filter out the value of an array
+console.log(greaterThan7);                              // [10, 11]
+
+// callback function on each element of the array, 
+// passing in the return value from the calculation on the preceding element
+
+const sum = arr.reduce((acc, current)=>{
+    acc+=current;
+    return acc;
+},0)
+console.log(sum)                    // 28
+
+
+
+//-------******COMPLEMENTARY*******--------//
+
+const bio = [
+    {firstName:'Prashant', lastName:'Jha', age:29},
+    {firstName:'Priyanka', lastName:'Chopra', age:39},
+    {firstName:'Donald', lastName:'Trump', age:57},
+]
+
+const names = bio.map(value=>value.firstName+" "+value.lastName);
+console.log(names);
+
+const namesWhoseAgeLessThan40 = bio.filter(value=>{
+    if(value.age<40){
+        return value
+    }
+}).map(value=>value.firstName+" "+value.lastName)
+console.log(namesWhoseLessThan40)
+
+const sumOfAgeInBio = bio.reduce((acc, current)=>{
+    acc=acc+current.age;
+    return acc;
+}, 0)
+console.log(sumOfAgeInBio);
+
+
+
