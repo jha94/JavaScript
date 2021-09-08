@@ -28,12 +28,12 @@ arr.splice(0,2, 10,11);
 console.log(arr);               // [10, 11, 7]
 
 
-const add2 = arr.map(value=>value+2);                   // to perform operation on every elements of array
+const add2 = arr.map(value=>value+2);                   //map is used to perform operation on every elements of array
 console.log(add2);                                      // [ 12, 13, 9 ]
-const greaterThan7 = arr.filter(value=>value>7);        // to filter out the value of an array
+const greaterThan7 = arr.filter(value=>value>7);        //filter is used to filter out the value of an array
 console.log(greaterThan7);                              // [10, 11]
 
-// callback function on each element of the array, 
+// reduce is callback function on each element of the array, 
 // passing in the return value from the calculation on the preceding element
 
 const sum = arr.reduce((acc, current)=>{
@@ -53,20 +53,20 @@ const bio = [
 ]
 
 const names = bio.map(value=>value.firstName+" "+value.lastName);
-console.log(names);
+console.log(names);                     // [ 'Prashant Jha', 'Priyanka Chopra', 'Donald Trump' ]
 
 const namesWhoseAgeLessThan40 = bio.filter(value=>{
     if(value.age<40){
         return value
     }
 }).map(value=>value.firstName+" "+value.lastName)
-console.log(namesWhoseLessThan40)
+console.log(namesWhoseAgeLessThan40)    // [ 'Prashant Jha', 'Priyanka Chopra' ]
 
 const sumOfAgeInBio = bio.reduce((acc, current)=>{
     acc=acc+current.age;
     return acc;
 }, 0)
-console.log(sumOfAgeInBio);
+console.log(sumOfAgeInBio);             // 125
 
 
 
