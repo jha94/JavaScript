@@ -1,36 +1,34 @@
-//Pass by ref
+//pass by ref
 
-let name = {
+const nameRef = {
     firstName:'Prashant',
-    lastName: 'Jha'
+    lastName:'Jha'
 }
 
-let name2 = name;
-name2.firstName = 'Pras';
-console.log(name);
-console.log(name2)
+const naamRef = name;
+naam.firstName = 'Tunna';
+console.log(naam);
+console.log(name)
 
-const nameArr = ['Prashant', 'Jha'];
-const nameArr2 = nameArr;
-nameArr2[0] = 'Pras';
-console.log(nameArr);
-console.log(nameArr2);
+const nameArrRef = ["Prashant", 'Jha'];
+const naamArrRef = nameArr;
+naamArr[0] = 'Tunna';
+console.log(naamArr, nameArr)
 
+//pass by value
 
-//Pass by value
-
-let name = {
+const nameVal = {
     firstName:'Prashant',
-    lastName: 'Jha'
+    lastName:'Jha'
 }
 
-let name2 = {...name};
-name2.firstName = 'Pras';
-console.log(name);
-console.log(name2)
+const naamVal = {...nameVal};
+naamVal.firstName = 'Tunna';
+console.log(naamVal);
+console.log(nameVal);
 
-const nameArr = ['Prashant', 'Jha'];
-const nameArr2 = [...nameArr];
-nameArr2[0] = 'Pras';
-console.log(nameArr);
-console.log(nameArr2);
+const nameArrVal = ['Prashant','Jha'];
+const naamArrVal = [...nameArrVal];
+naamArrVal[0] = 'Tunna';
+console.log(naamArrVal);
+console.log(nameArrVal)
