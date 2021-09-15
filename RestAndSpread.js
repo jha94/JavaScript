@@ -5,14 +5,15 @@
 
 let name = {
     firstName:'Prashant',
-    lastName: 'Jha'
+    lastName: 'Jha',
 }
-let name2 = {...name, age:27};
-console.log(name2)
+
+const bio = {...name, age:27}
+console.log(bio)
 
 const nameArr = ['Prashant', 'Jha'];
-const nameArr2 = [...nameArr, 27];
-console.log(nameArr2);
+const bioArr = [...nameArr, 27]
+console.log(bioArr)
 
 
 //Rest :- ...
@@ -21,4 +22,4 @@ console.log(nameArr2);
 function printArr(...n){
     console.log(n)
 }
-printArr(1,2,3,4,5,6)
+printArr(1, 2, 3, 4, 5);
