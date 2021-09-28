@@ -8,5 +8,5 @@ class Rectangle{
     }
 }
 
-const rec = new Rectangle(10,10);
+var rec = new Rectangle(10, 20);
 console.log(rec.calcArea())

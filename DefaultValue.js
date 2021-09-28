@@ -1,4 +1,4 @@
-function Default(a,b,c=3){
-    console.log(a,b,c);
+function def(a, b, c = 3){
+    console.log(a, b, c);
 }
-Default(1,2)
+def(1,2)

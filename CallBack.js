@@ -1,8 +1,8 @@
-function first(child){
-    child();
+function first(sec){
+    sec()
     console.log('first');
 }
 function second(){
-    console.log('Second');
+    console.log('second');
 }
 first(second)

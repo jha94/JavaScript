@@ -1,20 +1,21 @@
 function Destruct(){
-    let name = {
+    var obj = {
         firstName:'Prashant',
-        lastName:'Jha',
+        lastName: 'Jha',
     }
-    let bio = {
+
+    var arr = [1, 2];
+    var bio = {
         name:{
-            first:'Pras',
-            last:'jha'
+            fName:'test1',
+            lName: 'test2'
         }
     }
-const array = [1,2,3];
-const {firstName, lastName} = name;
-const [firstArrElement, secondArrElement, thirdArrElement] = array;
-const {name:{first,last}} = bio
-console.log(first, last)
-console.log(firstArrElement, secondArrElement, thirdArrElement, firstName, lastName);
-
+    const {firstName, lastName} = obj;
+    console.log(firstName, lastName);
+    const [first, last] = arr;
+    console.log(first, last);
+    const {name:{fName, lName}} = bio;
+    console.log(fName, lName);
 }
-Destruct()
+Destruct();

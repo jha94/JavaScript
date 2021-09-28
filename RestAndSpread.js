@@ -5,21 +5,21 @@
 
 let name = {
     firstName:'Prashant',
-    lastName: 'Jha',
+    lastName: 'Jha'
 }
 
 const bio = {...name, age:27}
 console.log(bio)
 
-const nameArr = ['Prashant', 'Jha'];
-const bioArr = [...nameArr, 27]
-console.log(bioArr)
+const arr = [1, 2, 3, 4];
+const arr2 = [...arr, 5];
+console.log(arr2);
 
 
 //Rest :- ...
 // to accept n number of arguments in a function
 
-function printArr(...n){
-    console.log(n)
+function Rest(...n){
+    console.log(n);
 }
-printArr(1, 2, 3, 4, 5);
+Rest(1, 2, 3, 4, 5, 6);

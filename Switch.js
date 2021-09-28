@@ -1,14 +1,14 @@
 function Switch(value){
     switch(value){
         case 'Ram':
-            console.log('It is Ram.');
+            console.log('this is ram');
             break;
-        case 'Sam':
-            console.log('it is Devil.');
-            break;
-        default:
-            console.log('Empty');
+            case 'sam':
+                console.log('this is sam');
+                break;
+                default:
+                    console.log('this is default')
     }
-
 }
-Switch('Ram')
+
+Switch('Ram');

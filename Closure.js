@@ -1,8 +1,8 @@
 function Closure(){
-    
-    return function first(){
-
+    var close = 'Close';
+     function first(){
+        console.log(close)
     }
-
+    first()
 }
 Closure();
