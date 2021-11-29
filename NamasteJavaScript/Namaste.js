@@ -9,3 +9,5 @@ console.log(x);
 console.log(getname);
 
 
+var test=true;
+test?`hi`:'hello'

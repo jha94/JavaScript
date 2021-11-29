@@ -58,21 +58,21 @@ const bio = [
     {firstName:'Donald', lastName:'Trump', age:57},
 ]
 
-const names = bio.map(value=>value.firstName+" "+value.lastName);
-console.log(names);                     // [ 'Prashant Jha', 'Priyanka Chopra', 'Donald Trump' ]
+const names = bio.map((value)=>value.firstName+" "+value.lastName);
+console.log(names)            // [ 'Prashant Jha', 'Priyanka Chopra', 'Donald Trump' ]
 
-const namesWhoseAgeLessThan40 = bio.filter(value=>{
+const lessThan40 = bio.filter((value)=>{
     if(value.age<40){
         return value
     }
-}).map(value=>value.firstName+" "+value.lastName)
-console.log(namesWhoseAgeLessThan40)    // [ 'Prashant Jha', 'Priyanka Chopra' ]
+}).map((value)=>value.firstName+" "+value.lastName);
+console.log(lessThan40);        // [ 'Prashant Jha', 'Priyanka Chopra' ]
 
-const sumOfAgeInBio = bio.reduce((acc, current)=>{
-    acc=acc+current.age;
-    return acc;
+const totalAge = bio.reduce((first, last)=>{
+    first = first+last.age;
+    return first;
 }, 0)
-console.log(sumOfAgeInBio);             // 125
+console.log(totalAge);      // 125
 
 
 
