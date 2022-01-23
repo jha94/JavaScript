@@ -1,5 +1,5 @@
 // Call, apply and bind all three are used for function
-//borrowing
+// borrowing
 
 const name = {
     firstName : "Prashant",

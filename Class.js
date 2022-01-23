@@ -7,6 +7,5 @@ class Rectangle{
         return this.height*this.width;
     }
 }
-
 var rec = new Rectangle(10, 20);
 console.log(rec.calcArea())

@@ -1,7 +1,7 @@
-//JS is synchrounous but it behhaves asynchronously
+//JS is synchrounous but it behaves asynchronously
 // thanks to it's runtime environment which makes it, in effect, asynchronous
 
-// To handle any asyn operation in JS we have 3 ways
+// To handle any async operation in JS we have 3 ways
 
 //1. Callback :-
 

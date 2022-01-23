@@ -1,20 +1,15 @@
 function reverse(num){
-    var sum = 0;
-    var prod = 0;
-    while(num>0){
-        var rem= Math.floor(num%10);
-        num/=10;
-        sum = sum+rem
-        if(prod===0){
-            prod = rem
-        } else{
-            if(rem!==0){
-                prod=prod*rem;
-            }
-        }
-    }
-    console.log(sum); 
-    console.log(prod); 
-    console.log(prod-sum);
+   let sum = 0;
+   let prod = 1;
+   while(num>0){
+       let rem = Math.floor(num%10);
+       num/=10;
+       sum+=rem;
+       if(rem!==0){
+       prod*=rem;
+       }
+   }
+   console.log(sum);
+   console.log(prod);
 }
-reverse(321)
+reverse(123)
